@@ -1,4 +1,20 @@
-from src.hh_api_class import HeadHunterParser
+from src.connect_to_postgresql import connection_to_data
+from src.utils import collecting_vacancies, creating_dictionary_list, saver_json
 
-s = HeadHunterParser()
-print(s.get_vacancies("сургутнефтегаз"))
+if __name__ == "__main__":
+    list_of_company = ["Caltat", "RedLab", "Центр финансовых технологий", "BRANDPOL",
+                       "Offer Now", "Безлимит", "Datanomica", "DNS Технологии",
+                       "Яндекс", "Тинькофф", "ЧУ ДО Московская школа программистов"]  # Список компании
+
+    vacancies_list = []
+    for search_query in list_of_company: # Цикл по созданию списка словарей, ключом которых является название компании
+        coll_vacancies = collecting_vacancies(search_query)
+        vacancies_list_item = {search_query: creating_dictionary_list(coll_vacancies)}
+        vacancies_list.append(vacancies_list_item)
+
+    saver_json(vacancies_list)  # Сохранение данных в JSON файл
+
+    connection_to_data(vacancies_list)
+
+
+

@@ -3,6 +3,10 @@ class DBManager:
     """класс DBManager для работы с данными в БД."""
 
     def get_companies_and_vacancies_count(self):
+        #for vacancy_item in vacancies_list:
+        #    search_query = list(vacancy_item.keys())[0]
+        #    vacancies = vacancy_item[search_query]
+        #    print(f"Number of vacancies for {search_query}: {len(vacancies)}")
 
         """получает список всех компаний и количество вакансий у каждой компании."""
 
