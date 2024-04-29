@@ -18,8 +18,8 @@ def creating_dictionary_list(other):
         salary_from = item['salary'].get('from') if item['salary'] else None
         salary_to = item['salary'].get('to') if item['salary'] else None
         vacancies_list.append(
-            {"title": item['name'], "city": item['area']['name'], "salary_from": salary_from, "salary_to": salary_to,
-             "link": item['area']['url']})
+            {"id": item['id'], "title": item['name'], "city": item['area']['name'], "salary_from": salary_from, "salary_to": salary_to,
+             "link": item['url']})
 
         # vacancies_list.append(item)
 
