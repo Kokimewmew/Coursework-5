@@ -19,4 +19,5 @@ database=YourDatabase
 user=YourUser
 
 password=YourPassword
+
 4. Для запуска программы запустите **_`main.py`_**
