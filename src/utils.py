@@ -28,20 +28,24 @@ def creating_dictionary_list(other):
 
 
 def get_print(input_user):
-    db = DBManager("Tashbulatov_A_I", "postgres", "localhost", "1234567890")
+    db = DBManager()
+
     if input_user == "1":
-        return db.get_companies_and_vacancies_count()
+        print(db.get_companies_and_vacancies_count())
     elif input_user == "2":
-        return db.get_all_vacancies()
+        print(db.get_all_vacancies())
     elif input_user == "3":
-        return db.get_avg_salary()
+        print(db.get_avg_salary())
     elif input_user == "4":
-        return db.get_vacancies_with_higher_salary()
+        print(db.get_vacancies_with_higher_salary())
     elif input_user == "5":
         input_keyword = input("Введите ключевое слово названия вакансии или компании\n")
-        return db.get_vacancies_with_keyword(input_keyword)
+        print(db.get_vacancies_with_keyword(input_keyword))
+    elif input_user == "стоп" or input_user == "stop":
+        print('Выход из программы')
+        return "стоп"
     else:
-        return f'Неправильный набор'
+        print("Неправильный набор")
 
 
 

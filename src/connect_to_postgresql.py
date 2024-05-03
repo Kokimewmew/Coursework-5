@@ -1,13 +1,11 @@
 import psycopg2
 
+from config import config
+
 
 def connection_to_data(vacancies_list):
-    conn = psycopg2.connect(
-        host="localhost",
-        database="Tashbulatov_A_I",
-        user="postgres",
-        password="1234567890"
-    )
+    db_params = config()
+    conn = psycopg2.connect(**db_params)
 
     cur = conn.cursor()
     cur.execute("DROP TABLE IF EXISTS vacancies")
