@@ -11,7 +11,7 @@ pip install -r requirements.txt
 2. Создать файл с названием database.ini, который заполняется следующим образом:
 [postgresql]  
 host=YourHost  
+database=YourDatabase
 user=YourUser  
-password=YourPassword  
-port=YourPort  
-2. Для запуска программы запустите **main.py**
+password=YourPassword
+3. Для запуска программы запустите **main.py**
