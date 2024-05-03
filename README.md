@@ -11,6 +11,7 @@ pip install -r requirements.txt
 2. Создать файл с названием database.ini, который заполняется следующим образом:
 
 [postgresql]
+
 host=YourHost
 
 database=YourDatabase 
