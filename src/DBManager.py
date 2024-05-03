@@ -4,11 +4,12 @@ from config import config
 
 
 class DBManager:
+    """класс DBManager для работы с данными в БД."""
     def __init__(self):
         db_params = config()
         self.conn = psycopg2.connect(**db_params)
 
-    """класс DBManager для работы с данными в БД."""
+
 
     def get_companies_and_vacancies_count(self):
         """получает список всех компаний и количество вакансий у каждой компании."""

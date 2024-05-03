@@ -19,7 +19,8 @@ def creating_dictionary_list(other):
         salary_from = item['salary'].get('from') if item['salary'] else None
         salary_to = item['salary'].get('to') if item['salary'] else None
         vacancies_list.append(
-            {"id": item['id'], "title": item['name'], "city": item['area']['name'], "salary_from": salary_from, "salary_to": salary_to,
+            {"id": item['id'], "title": item['name'], "city": item['area']['name'], "salary_from": salary_from,
+             "salary_to": salary_to,
              "link": item['url']})
 
         # vacancies_list.append(item)
@@ -28,6 +29,7 @@ def creating_dictionary_list(other):
 
 
 def get_print(input_user):
+    """Функция вывода результатов по запросу"""
     db = DBManager()
 
     if input_user == "1":
@@ -46,7 +48,6 @@ def get_print(input_user):
         return "стоп"
     else:
         print("Неправильный набор")
-
 
 
 def saver_json(other):
